@@ -1,5 +1,10 @@
 function fibonacci(n) {
-  // type your code here
+  if (n < 2) {
+    return n
+  } else if (n===2){
+    return fibonacci(0) + fibonacci(1)
+  }
+  return fibonacci(n-1) + fibonacci(n-2)
 }
 
 if (require.main === module) {
@@ -11,6 +16,10 @@ if (require.main === module) {
 
   console.log("Expecting: 1");
   console.log("=>", fibonacci(2));
+  console.log("Expecting: 2");
+  console.log("=>", fibonacci(3));
+  console.log("Expecting: 3");
+  console.log("=>", fibonacci(4));
 
   console.log("");
 
